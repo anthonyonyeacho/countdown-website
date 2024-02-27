@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>countdown for earth fist launch</title>
+<link href="style.css" type="text/css">
+</head>
+<body>
+  <div class="container"> <img src="{8B59EBE0-0013-48DE-AFBB-8623302F08B9}.png.jpg" class="logo"></div>
+  <div class="content">
+    <p>Space launch due to happen soon.</p>
+    <h1>We're <span>Launching</span>Soon.</h1>
+  
+    <button type="button"> FIND OUT MORE INFO HERE <img src="{CBA43026-12B2-450B-B554-587F66E6CBEE}.png.jpg"></button>
+  </div>
+<h1>Take off due to happen soon</h1>
+<div id="countdown"></div>
+<img id="giveaway-image" src={2C334A6D-542B-41FD-A3FB-EE1B6044F710}.png.jpg>
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Mar 2, 2024 00:00:00").getTime();
+  
+  // Update the countdown every 1 second
+  var x = setInterval(function() {
+  
+    // Get the current date and time
+    var now = new Date().getTime();
+  
+    // Calculate the distance between now and the countdown date
+    var distance = countDownDate - now;
+  
+    // Calculate days, hours, minutes and seconds remaining
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    // Display the countdown timer
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+  
+    // If the countdown is over, display a message
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+  
+  
+  
+</body>
+</html>
